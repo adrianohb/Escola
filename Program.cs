@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
@@ -30,6 +31,7 @@ namespace Escola
 
             int index = 1;
             int menu = 0;
+            int perfil_aluno = 0;
            
             Console.WriteLine(" Bem vindo ao menu da escola");
             Console.WriteLine(" 1 - Adicionar aluno.");
@@ -58,7 +60,7 @@ namespace Escola
 
                 if (menu == 1)
                 {
-                    Console.WriteLine("...: MENU ADICIONAR ALUNOS:...");
+                    Console.WriteLine("...: MENU ADICIONAR ALUNOS :...");
                     Console.WriteLine("Qual o nome do aluno?");
                     aluno[(index - 1)] = Console.ReadLine();
 
@@ -85,11 +87,33 @@ namespace Escola
                 }
                 if (menu == 2)
                 {
-                    Console.WriteLine("...: MENU LISTA DE ALUNOS:...");
+                    Console.WriteLine("...: MENU LISTA DE ALUNOS :...");
 
-                    for ( int pos_aluno = 0; pos_aluno < aluno.Length; pos_aluno++)
-                        Console.WriteLine(aluno[index]);
+                    /* for (int pos_aluno = 0; pos_aluno <= aluno.Length; pos_aluno++)
+                     {
+                         Console.WriteLine($"{pos_aluno + 1} -  {aluno[pos_aluno]}");
+                     }
+                    */
+
+                    Console.WriteLine(aluno[0]);
+                    Console.WriteLine(aluno[1]);
+
+                    Console.WriteLine("Qual aluno deseja acessar?");
+                    perfil_aluno = int.Parse(Console.ReadLine());
+                    menu = 4;
                 }
+
+                if (menu == 4)
+                {
+                    Console.WriteLine("...: PERFIL DO ALUNO :...");
+                    // int perfil_atual = 0;
+                    Console.WriteLine(aluno[perfil_aluno - 1]);
+                    Console.WriteLine(idade[perfil_aluno - 1]);
+                    Console.WriteLine(sexo[perfil_aluno - 1]);
+                    
+                }
+
+
             }
 
         }
