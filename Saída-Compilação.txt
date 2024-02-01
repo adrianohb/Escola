@@ -1,0 +1,5 @@
+﻿Compilação iniciada...
+1>------ Compilação iniciada: Projeto: Escola, Configuração: Debug Any CPU ------
+1>  Escola -> C:\Users\Aluno\Desktop\Projeto CSharp Adriano\Escola\bin\Debug\Escola.exe
+========== Compilação: 1 bem-sucedida, 0 com falha, 0 atualizada, 0 ignorada ==========
+========== Compilação começou em 21:55 e levou 00,213 segundos ==========
